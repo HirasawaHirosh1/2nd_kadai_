@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+
+ 
+
+  <ul>
+    <li id="gu_btn">グー</li>
+    <li id="cho_btn">チョキ</li>
+    <li id="par_btn">パー</li>
+  </ul>
+  <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+  <div>　<span id="judgment" style="display:none";>勝ち</span>　</div>
+
+</main>
+
+<footer></footer>
+
+<script>
+
+// 1.クリックイベント
+// 2.乱数を作成
+// 3.IFでロボット用の手を決定
+// 4.IF中の＄により結果をhtmlで表示
+function strfnc(){}
+
+$("#gu_btn").on("click",function(){
+
+const num = Math.ceil( Math.random() * 3 );
+if(num==1){
+  $("#pc_hands").html("グー")
+  $("#judgment").html("あいこ")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+
+else if(num==2){ 
+  $("#pc_hands").html("チョキ")
+  $("#judgment").html("かち")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+
+else if(num==3){
+  $("#pc_hands").html("パー")
+  $("#judgment").html("負け")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+});
+
+$("#cho_btn").on("click",function(){
+
+const num = Math.ceil( Math.random() * 3 );
+if(num==1){
+  $("#pc_hands").html("グー")
+  $("#judgment").html("負け")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+if(num==2){ $("#pc_hands").html("チョキ")
+  $("#judgment").html("あいこ")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+
+if(num==3){
+  $("#pc_hands").html("パー")
+  $("#judgment").html("勝ち")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+});
+
+$("#par_btn").on("click",function(){
+
+const num = Math.ceil( Math.random() * 3 );
+if(num==1){
+  $("#pc_hands").html("グー")
+  $("#judgment").html("勝ち")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+if(num==2){ $("#pc_hands").html("チョキ")
+$("#judgment").html("負け")
+$("#judgment").fadeIn(2000)
+$("#judgment").fadeOut(2000)
+}
+if(num==3){
+  $("#pc_hands").html("パー")
+  $("#judgment").html("あいこ")
+  $("#judgment").fadeIn(2000)
+  $("#judgment").fadeOut(2000)
+}
+});
+
+// プラスアルファの機能
+// 
+
+
+</script>
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+</body>
+</html>

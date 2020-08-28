@@ -1,0 +1,105 @@
+
+<!-- saved from url=(0057)https://s3-ap-northeast-1.amazonaws.com/awsyk/index2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <script src="./index2_files/jquery.min.js.ダウンロード"></script>
+    <script>
+      $(function() {
+      
+      $("#btn-execute").click(function() {
+
+        var special = $("#special").val()
+        var text = special;
+        /*
+        * 譁&#65533;ｭ玲焚繧貞&#65533;縺&#65533;
+        * 蟾ｦ蛛ｴ驛ｨ蛻&#65533;ｒ菴墓枚蟄礼岼縺ｫ縺吶ｋ縺句&#65533;縺&#65533;
+        * 髢句ｧ九&#65533;font-size縲〉otate3d縲】-index縺ｮ謖&#65533;ｮ壹ｒ縺吶ｋ
+        */
+        var center = Math.ceil(text.length / 2)
+        var fontSize = 2;
+        var rotate3dX = 180;
+        var rotate3dY = 300;
+        var rotate3dZ = 1;
+        var rotate3dAngle = 65;
+        var zIndex = 100;
+        var marginLeft = 0;
+
+        $(".dragonquest").text("")
+        for(var i=0; i<text.length; i++) {
+          var c = text.charAt(i);
+console.log(c);
+          $(".dragonquest").append("<span>"+ c + "</span>")
+          var span = $(".dragonquest span")
+          $(span[i]).css({
+            fontSize: fontSize + "em",
+            transform: "rotate3d(" + rotate3dX + "," + rotate3dY + "," + rotate3dZ + "," + rotate3dAngle + "deg)",
+            display: "inline-block",
+            position: "relative"
+          });
+          if(i+1 <= center) {
+            $(span[i]).css("textShadow", "-1px 1px 0 #F2DD3E,-1px 1px 0 #B89B29, -2px 2px 0 #D2AE2C, -3px 3px 0 #D2AE2C, -4px 4px 0 #D2AE2C, -5px 5px 0 #D2AE2C, -6px 6px 0 #D2AE2C,-7px 7px 0 #D2AE2C,-8px 8px 0 #D2AE2C,-9px 9px 0 #D2AE2C,-10px 10px 0 #DDB72F,-11px 11px 0 #DDB72F");
+            $(span[i]).css("marginLeft", marginLeft);
+            $(span[i]).css("zIndex", zIndex);
+            $(span[i]).css("transform", "rotate3d(" + rotate3dX + "," + rotate3dY + "," + rotate3dZ + "," + rotate3dAngle + "deg)");
+
+
+            rotate3dAngle = rotate3dAngle - 5;
+            if(rotate3dAngle < 0) {
+              rotate3dAngle = 0
+            }
+
+            var fontSizeSet = Math.floor(2 / center * 10) / 10
+            fontSize = fontSize - fontSizeSet;
+            if(fontSize < 1) {
+              fontSize = 1;
+            }
+            marginLeft = -25 + i*8;
+            if(marginLeft > -10) {
+              marginLeft = -10;
+            }
+            zIndex = zIndex - 1;
+
+            if(i+1 == center) {
+              /* $(span[i]).css("marginRight", "20px"); */
+              rotate3dAngle = rotate3dAngle - rotate3dAngle*2;
+              marginLeft = 0;
+            }
+
+          }else{
+            var rotate3dX = -300;
+            var rotate3dY = 200;
+            var rotate3dZ = 1;
+            $(span[i]).css("textShadow", "1px 1px 0 #F2DD3E,1px 1px 0 #B89B29, 2px 2px 0 #D2AE2C, 3px 3px 0 #D2AE2C, 4px 4px 0 #D2AE2C, 5px 5px 0 #D2AE2C, 6px 6px 0 #D2AE2C,7px 7px 0 #D2AE2C,8px 8px 0 #D2AE2C,9px 9px 0 #D2AE2C,-0px 10px 0 #DDB72F,11px 11px 0 #DDB72F");
+            $(span[i]).css("marginLeft", marginLeft);
+            $(span[i]).css("zIndex", zIndex);
+            $(span[i]).css("transform", "rotate3d(" + rotate3dX + "," + rotate3dY + "," + rotate3dZ + "," + rotate3dAngle + "deg)");
+
+            rotate3dAngle = rotate3dAngle - 5;
+            if(rotate3dAngle < -65) {
+              /*rotate3dAngle = -65;*/
+            }
+            var num = text.length - center;
+            var fontSizeSet = Math.floor(2 / num * 10) / 10;
+            fontSize = fontSize + fontSizeSet
+            marginLeft = -25 + i*2;
+            if(marginLeft < -35) {
+              /*marginLeft = -35;*/
+            }
+            zIndex = zIndex + 1;
+          }
+
+        }
+
+      });
+
+      });
+    </script>
+  </head>
+  <body class="vsc-initialized">
+    <div style="margin-top: 20px; font-size: 4em; font-family: &#39;Impact&#39;">
+      <input type="text" id="special" name="special" value="GUNDAMF91">
+      <input id="btn-execute" type="button" onclick="" value="螳溯｡&#65533;">
+      <div class="dragonquest"><span style="font-size: 2em; transform: rotate3d(180, 300, 1, 65deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: 0px; z-index: 100;">J</span><span style="font-size: 1.8em; transform: rotate3d(180, 300, 1, 60deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: -25px; z-index: 99;">y</span><span style="font-size: 1.6em; transform: rotate3d(180, 300, 1, 55deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: -17px; z-index: 98;">a</span><span style="font-size: 1.4em; transform: rotate3d(180, 300, 1, 50deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: -10px; z-index: 97;">n</span><span style="font-size: 1.2em; transform: rotate3d(180, 300, 1, 45deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: -10px; z-index: 96;">k</span><span style="font-size: 1em; transform: rotate3d(180, 300, 1, 40deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: -10px; z-index: 95;">e</span><span style="font-size: 1em; transform: rotate3d(180, 300, 1, 35deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) -1px 1px 0px, rgb(184, 155, 41) -1px 1px 0px, rgb(210, 174, 44) -2px 2px 0px, rgb(210, 174, 44) -3px 3px 0px, rgb(210, 174, 44) -4px 4px 0px, rgb(210, 174, 44) -5px 5px 0px, rgb(210, 174, 44) -6px 6px 0px, rgb(210, 174, 44) -7px 7px 0px, rgb(210, 174, 44) -8px 8px 0px, rgb(210, 174, 44) -9px 9px 0px, rgb(221, 183, 47) -10px 10px 0px, rgb(221, 183, 47) -11px 11px 0px; margin-left: -10px; z-index: 94;">n</span><span style="font-size: 1em; transform: rotate3d(-300, 200, 1, -30deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) 1px 1px 0px, rgb(184, 155, 41) 1px 1px 0px, rgb(210, 174, 44) 2px 2px 0px, rgb(210, 174, 44) 3px 3px 0px, rgb(210, 174, 44) 4px 4px 0px, rgb(210, 174, 44) 5px 5px 0px, rgb(210, 174, 44) 6px 6px 0px, rgb(210, 174, 44) 7px 7px 0px, rgb(210, 174, 44) 8px 8px 0px, rgb(210, 174, 44) 9px 9px 0px, rgb(221, 183, 47) 0px 10px 0px, rgb(221, 183, 47) 11px 11px 0px; margin-left: 0px; z-index: 93;"> </span><span style="font-size: 1.3em; transform: rotate3d(-300, 200, 1, -35deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) 1px 1px 0px, rgb(184, 155, 41) 1px 1px 0px, rgb(210, 174, 44) 2px 2px 0px, rgb(210, 174, 44) 3px 3px 0px, rgb(210, 174, 44) 4px 4px 0px, rgb(210, 174, 44) 5px 5px 0px, rgb(210, 174, 44) 6px 6px 0px, rgb(210, 174, 44) 7px 7px 0px, rgb(210, 174, 44) 8px 8px 0px, rgb(210, 174, 44) 9px 9px 0px, rgb(221, 183, 47) 0px 10px 0px, rgb(221, 183, 47) 11px 11px 0px; margin-left: -11px; z-index: 94;">Q</span><span style="font-size: 1.6em; transform: rotate3d(-300, 200, 1, -40deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) 1px 1px 0px, rgb(184, 155, 41) 1px 1px 0px, rgb(210, 174, 44) 2px 2px 0px, rgb(210, 174, 44) 3px 3px 0px, rgb(210, 174, 44) 4px 4px 0px, rgb(210, 174, 44) 5px 5px 0px, rgb(210, 174, 44) 6px 6px 0px, rgb(210, 174, 44) 7px 7px 0px, rgb(210, 174, 44) 8px 8px 0px, rgb(210, 174, 44) 9px 9px 0px, rgb(221, 183, 47) 0px 10px 0px, rgb(221, 183, 47) 11px 11px 0px; margin-left: -9px; z-index: 95;">u</span><span style="font-size: 1.9em; transform: rotate3d(-300, 200, 1, -45deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) 1px 1px 0px, rgb(184, 155, 41) 1px 1px 0px, rgb(210, 174, 44) 2px 2px 0px, rgb(210, 174, 44) 3px 3px 0px, rgb(210, 174, 44) 4px 4px 0px, rgb(210, 174, 44) 5px 5px 0px, rgb(210, 174, 44) 6px 6px 0px, rgb(210, 174, 44) 7px 7px 0px, rgb(210, 174, 44) 8px 8px 0px, rgb(210, 174, 44) 9px 9px 0px, rgb(221, 183, 47) 0px 10px 0px, rgb(221, 183, 47) 11px 11px 0px; margin-left: -7px; z-index: 96;">e</span><span style="font-size: 2.2em; transform: rotate3d(-300, 200, 1, -50deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) 1px 1px 0px, rgb(184, 155, 41) 1px 1px 0px, rgb(210, 174, 44) 2px 2px 0px, rgb(210, 174, 44) 3px 3px 0px, rgb(210, 174, 44) 4px 4px 0px, rgb(210, 174, 44) 5px 5px 0px, rgb(210, 174, 44) 6px 6px 0px, rgb(210, 174, 44) 7px 7px 0px, rgb(210, 174, 44) 8px 8px 0px, rgb(210, 174, 44) 9px 9px 0px, rgb(221, 183, 47) 0px 10px 0px, rgb(221, 183, 47) 11px 11px 0px; margin-left: -5px; z-index: 97;">s</span><span style="font-size: 2.5em; transform: rotate3d(-300, 200, 1, -55deg); display: inline-block; position: relative; text-shadow: rgb(242, 221, 62) 1px 1px 0px, rgb(184, 155, 41) 1px 1px 0px, rgb(210, 174, 44) 2px 2px 0px, rgb(210, 174, 44) 3px 3px 0px, rgb(210, 174, 44) 4px 4px 0px, rgb(210, 174, 44) 5px 5px 0px, rgb(210, 174, 44) 6px 6px 0px, rgb(210, 174, 44) 7px 7px 0px, rgb(210, 174, 44) 8px 8px 0px, rgb(210, 174, 44) 9px 9px 0px, rgb(221, 183, 47) 0px 10px 0px, rgb(221, 183, 47) 11px 11px 0px; margin-left: -3px; z-index: 98;">t</span></div>
+    </div>
+  
+
+</body></html>
